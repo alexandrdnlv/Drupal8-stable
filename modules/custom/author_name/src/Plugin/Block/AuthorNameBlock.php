@@ -61,14 +61,14 @@ class AuthorNameBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    /** @var \User $user */
-    $user = \Drupal::currentUser();
-    $username = $user->getUsername();
     $build = [];
     if ($this->configuration['display_custom_text_if_checked']) {
       $build['author_name_block_custom_text_to_display']['#markup'] = '<p>' . $this->configuration['custom_text_to_display'] . '</p>';
     }
     else {
+      /** @var \User $user */
+      $user = \Drupal::currentUser();
+      $username = $user->getUsername();
       $build['author_name_block_custom_text_to_display']['#markup'] = '<p>' . $username . '</p>';
     }
     return $build;
