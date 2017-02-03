@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains author_name.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function author_name_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the author_name module.
+    case 'help.page.author_name':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module which defines new block') . '</p>';
+      return $output;
+
+    default:
+  }
+}

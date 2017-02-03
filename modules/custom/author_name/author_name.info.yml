@@ -1,0 +1,5 @@
+name: Author name
+type: module
+description: Module which defines new block
+core: 8.x
+package: Custom
