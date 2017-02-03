@@ -66,7 +66,7 @@ class AuthorNameBlock extends BlockBase {
       $build['author_name_block_custom_text_to_display']['#markup'] = '<p>' . $this->configuration['custom_text_to_display'] . '</p>';
     }
     else {
-      /** @var \User $user */
+      /** @var \Drupal\User\Entity\User $user */
       $user = \Drupal::currentUser();
       $username = $user->getUsername();
       $build['author_name_block_custom_text_to_display']['#markup'] = '<p>' . $username . '</p>';
